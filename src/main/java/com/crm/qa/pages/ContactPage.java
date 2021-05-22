@@ -1,6 +1,7 @@
 package com.crm.qa.pages;
 
 import com.crm.qa.base.TestBase;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -32,7 +33,7 @@ public class ContactPage  extends TestBase {
     public void CreateNewContactLink(){
         addNewContact.click();
     }
-
+    @Step("Creating New Contact with firstName: {0} , lastName: {1}, address: {2} step...")
     public void createNewContact(String fName, String lName, String address){
 //        Select select = new Select(driver.findElement(By.name(status)));
 //        select.selectByVisibleText(status);

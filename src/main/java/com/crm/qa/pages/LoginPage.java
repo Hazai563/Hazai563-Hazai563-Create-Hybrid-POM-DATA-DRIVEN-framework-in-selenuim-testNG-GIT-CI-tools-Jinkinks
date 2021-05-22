@@ -1,6 +1,7 @@
 package com.crm.qa.pages;
 
 import com.crm.qa.base.TestBase;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -26,11 +27,11 @@ public class LoginPage extends TestBase {
     public LoginPage(){
         PageFactory.initElements(driver, this);
     }
-
+    @Step("getting login page title...")
     public String validateLoginPageTitle(){
         return driver.getTitle();
     }
-
+    @Step("Login page displayed and login into app with username: {0} , password: {1} step...")
     public HomePage login(String usr, String pass){
 
         logInPage.click();
